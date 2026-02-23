@@ -33,5 +33,5 @@ A React Native mobile application for discovering books, viewing details, and ch
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/book-explorer-app.git
+git clone https://github.com/Sajad-ahmed-soomro/book-explorer-app.git
 cd book-explorer-app
