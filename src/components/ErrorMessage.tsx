@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons'; // Changed this line
 
 interface ErrorMessageProps {
   message: string;
@@ -10,7 +10,7 @@ interface ErrorMessageProps {
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, onRetry }) => {
   return (
     <View style={styles.container}>
-      <Icon name="error-outline" size={48} color="#e74c3c" />
+      <MaterialIcons name="error-outline" size={48} color="#e74c3c" /> {/* Changed from Icon to MaterialIcons */}
       <Text style={styles.message}>{message}</Text>
       {onRetry && (
         <TouchableOpacity style={styles.retryButton} onPress={onRetry}>

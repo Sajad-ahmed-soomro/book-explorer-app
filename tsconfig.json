@@ -6,15 +6,26 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "esnext"],
     "target": "esnext",
-    "module": "commonjs",
-    "types": ["jest", "@testing-library/jest-native"]
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["react", "react-native"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/**/*"],
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

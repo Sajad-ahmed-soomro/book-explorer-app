@@ -71,7 +71,7 @@ export const getBookDetails = async (bookId: string): Promise<Book> => {
       coverImage: item.volumeInfo.imageLinks?.thumbnail?.replace('http:', 'https:'),
       description: item.volumeInfo.description,
       isbn: item.volumeInfo.industryIdentifiers?.find(
-        (id) => id.type === 'ISBN_13' || id.type === 'ISBN_10'
+        (id:any) => id.type === 'ISBN_13' || id.type === 'ISBN_10'
       )?.identifier,
       publisher: item.volumeInfo.publisher,
       rating: item.volumeInfo.averageRating,

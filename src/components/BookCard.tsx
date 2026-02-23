@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons'; // Change this
 import { Book } from '../types';
 
 interface BookCardProps {
@@ -21,7 +21,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onPress }) => {
         <Image source={{ uri: book.coverImage }} style={styles.cover} />
       ) : (
         <View style={styles.placeholderCover}>
-          <Icon name="menu-book" size={40} color="#999" />
+          <MaterialIcons name="menu-book" size={40} color="#999" /> {/* Changed */}
         </View>
       )}
       
@@ -37,7 +37,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onPress }) => {
         )}
         {book.rating !== undefined && (
           <View style={styles.ratingContainer}>
-            <Icon name="star" size={16} color="#f1c40f" />
+            <MaterialIcons name="star" size={16} color="#f1c40f" /> {/* Changed */}
             <Text style={styles.rating}>
               {book.rating.toFixed(1)} ({book.ratingsCount || 0})
             </Text>
@@ -47,6 +47,8 @@ const BookCard: React.FC<BookCardProps> = ({ book, onPress }) => {
     </TouchableOpacity>
   );
 };
+
+// ... styles remain the same
 
 const styles = StyleSheet.create({
   card: {

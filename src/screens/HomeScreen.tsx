@@ -6,15 +6,13 @@ import {
   FlatList,
   StyleSheet,
   ActivityIndicator,
-  TouchableOpacity,
-  Image,
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons'; // Changed from 'react-native-vector-icons/MaterialIcons'
 import { searchBooks } from '../services/api';
 import { Book, RootStackParamList } from '../types';
 import ErrorMessage from '../components/ErrorMessage';
@@ -64,7 +62,7 @@ const HomeScreen = () => {
     
     return (
       <View style={styles.emptyState}>
-        <Icon name="menu-book" size={64} color="#ccc" />
+        <MaterialIcons name="menu-book" size={64} color="#ccc" /> {/* Changed from Icon to MaterialIcons */}
         <Text style={styles.emptyStateText}>
           {searchQuery.length < 3
             ? 'Type at least 3 characters to search for books'
@@ -86,7 +84,7 @@ const HomeScreen = () => {
         </View>
 
         <View style={styles.searchContainer}>
-          <Icon name="search" size={24} color="#666" style={styles.searchIcon} />
+          <MaterialIcons name="search" size={24} color="#666" style={styles.searchIcon} /> {/* Changed from Icon to MaterialIcons */}
           <TextInput
             style={styles.searchInput}
             placeholder="Search by title or author..."

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface RatingStarsProps {
   rating: number;
@@ -20,13 +20,13 @@ const RatingStars: React.FC<RatingStarsProps> = ({
   return (
     <View style={styles.container}>
       {[...Array(fullStars)].map((_, i) => (
-        <Icon key={`full-${i}`} name="star" size={size} color="#f1c40f" />
+        <MaterialIcons key={`full-${i}`} name="star" size={size} color="#f1c40f" />
       ))}
       {hasHalfStar && (
-        <Icon name="star-half" size={size} color="#f1c40f" />
+        <MaterialIcons name="star-half" size={size} color="#f1c40f" />
       )}
       {[...Array(emptyStars)].map((_, i) => (
-        <Icon key={`empty-${i}`} name="star-border" size={size} color="#f1c40f" />
+        <MaterialIcons key={`empty-${i}`} name="star-border" size={size} color="#f1c40f" />
       ))}
     </View>
   );
