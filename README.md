@@ -35,3 +35,7 @@ A React Native mobile application for discovering books, viewing details, and ch
 ```bash
 git clone https://github.com/Sajad-ahmed-soomro/book-explorer-app.git
 cd book-explorer-app
+
+2 Start web app
+```bash
+npx expo start --web --clear
