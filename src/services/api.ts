@@ -5,7 +5,7 @@ const GOOGLE_BOOKS_API = 'https://www.googleapis.com/books/v1';
 const OPEN_LIBRARY_API = 'https://openlibrary.org';
 const NYTIMES_API = 'https://api.nytimes.com/svc/books/v3';
 
-const NYTIMES_API_KEY = 'YOUR_NYTIMES_API_KEY';
+const NYTIMES_API_KEY = '';
 
 interface GoogleBookVolume {
   id: string;

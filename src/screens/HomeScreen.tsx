@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { MaterialIcons } from '@expo/vector-icons'; // Changed from 'react-native-vector-icons/MaterialIcons'
+import { MaterialIcons } from '@expo/vector-icons'; 
 import { searchBooks } from '../services/api';
 import { Book, RootStackParamList } from '../types';
 import ErrorMessage from '../components/ErrorMessage';
