@@ -5,7 +5,6 @@ const GOOGLE_BOOKS_API = 'https://www.googleapis.com/books/v1';
 const OPEN_LIBRARY_API = 'https://openlibrary.org';
 const NYTIMES_API = 'https://api.nytimes.com/svc/books/v3';
 
-// Note: You'll need to get an API key from NYTimes
 const NYTIMES_API_KEY = 'YOUR_NYTIMES_API_KEY';
 
 interface GoogleBookVolume {
@@ -85,8 +84,7 @@ export const getBookDetails = async (bookId: string): Promise<Book> => {
 
 export const getBookRatings = async (isbn: string): Promise<Rating | null> => {
   try {
-    // Using Google Books ratings as fallback since NYTimes API requires key
-    // You can implement NYTimes API here if you have the key
+   
     const response = await axios.get(`${GOOGLE_BOOKS_API}/volumes?q=isbn:${isbn}`);
     
     if (response.data.items?.[0]?.volumeInfo) {

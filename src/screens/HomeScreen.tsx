@@ -62,7 +62,7 @@ const HomeScreen = () => {
     
     return (
       <View style={styles.emptyState}>
-        <MaterialIcons name="menu-book" size={64} color="#ccc" /> {/* Changed from Icon to MaterialIcons */}
+        <MaterialIcons name="menu-book" size={64} color="#ccc" /> 
         <Text style={styles.emptyStateText}>
           {searchQuery.length < 3
             ? 'Type at least 3 characters to search for books'
@@ -84,7 +84,7 @@ const HomeScreen = () => {
         </View>
 
         <View style={styles.searchContainer}>
-          <MaterialIcons name="search" size={24} color="#666" style={styles.searchIcon} /> {/* Changed from Icon to MaterialIcons */}
+          <MaterialIcons name="search" size={24} color="#666" style={styles.searchIcon} /> 
           <TextInput
             style={styles.searchInput}
             placeholder="Search by title or author..."

@@ -10,7 +10,7 @@ import {
   Linking,
 } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { MaterialIcons } from '@expo/vector-icons'; // Changed from 'react-native-vector-icons/MaterialIcons'
+import { MaterialIcons } from '@expo/vector-icons'; 
 import { RootStackParamList } from '../types';
 import { getBookRatings } from '../services/api';
 import ErrorMessage from '../components/ErrorMessage';
@@ -60,7 +60,7 @@ const BookDetailScreen = () => {
           <Image source={{ uri: book.coverImage }} style={styles.coverImage} />
         ) : (
           <View style={styles.placeholderCover}>
-            <MaterialIcons name="menu-book" size={80} color="#999" /> {/* Changed from Icon to MaterialIcons */}
+            <MaterialIcons name="menu-book" size={80} color="#999" /> 
           </View>
         )}
         
@@ -112,12 +112,12 @@ const BookDetailScreen = () => {
         <Text style={styles.sectionTitle}>Find More</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={handleSearchMore}>
-            <MaterialIcons name="search" size={20} color="#fff" /> {/* Changed from Icon to MaterialIcons */}
+            <MaterialIcons name="search" size={20} color="#fff" /> 
             <Text style={styles.buttonText}>Search Online</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={handleOpenLibrary}>
-            <MaterialIcons name="library-books" size={20} color="#2c3e50" /> {/* Changed from Icon to MaterialIcons */}
+            <MaterialIcons name="library-books" size={20} color="#2c3e50" />
             <Text style={[styles.buttonText, styles.secondaryButtonText]}>Open Library</Text>
           </TouchableOpacity>
         </View>
